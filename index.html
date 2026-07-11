@@ -411,28 +411,29 @@
                 <p class="text-xs text-zinc-500">Send an inquiry directly to get started on your next design loop.</p>
             </div>
             
-           <form action="https://formspree.io/f/mnjeajll" method="POST">
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div class="space-y-1">
-                        <label class="text-[10px] font-medium text-zinc-400 block uppercase tracking-wider">Your Name</label>
-                        <input required type="text" id="name" placeholder="John Doe" class="w-full bg-zinc-900/40 border border-zinc-800/80 focus:border-zinc-500 rounded-xl px-4 py-2.5 outline-none transition-colors text-white">
-                    </div>
-                    <div class="space-y-1">
-                        <label class="text-[10px] font-medium text-zinc-400 block uppercase tracking-wider">Your Email</label>
-                        <input required type="email" id="email" placeholder="john@company.com" class="w-full bg-zinc-900/40 border border-zinc-800/80 focus:border-zinc-500 rounded-xl px-4 py-2.5 outline-none transition-colors text-white">
-                    </div>
-                </div>
-                <div class="space-y-1">
-                    <label class="text-[10px] font-medium text-zinc-400 block uppercase tracking-wider">Message Details</label>
-                    <textarea required id="message" rows="4" placeholder="Briefly describe what you're looking to create..." class="w-full bg-zinc-900/40 border border-zinc-800/80 focus:border-zinc-500 rounded-xl px-4 py-2.5 outline-none transition-colors text-white resize-none"></textarea>
-                </div>
+           <form action="https://formspree.io/f/mnjeajll" method="POST" class="space-y-4 text-xs">
+    
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div class="space-y-1">
+            <label class="text-[10px] font-medium text-zinc-400 block uppercase tracking-wider">Your Name</label>
+            <input required type="text" name="name" id="name" placeholder="John Doe" class="...">
+        </div>
+        <div class="space-y-1">
+            <label class="text-[10px] font-medium text-zinc-400 block uppercase tracking-wider">Your Email</label>
+            <input required type="email" name="email" id="email" placeholder="john@company.com" class="...">
+        </div>
+    </div>
+    <div class="space-y-1">
+        <label class="text-[10px] font-medium text-zinc-400 block uppercase tracking-wider">Message Details</label>
+        <textarea required name="message" id="message" rows="4" placeholder="..." class="..."></textarea>
+    </div>
 
-                <button type="submit" id="btn" class="w-full bg-white hover:bg-zinc-200 text-zinc-950 font-bold py-3 rounded-xl uppercase tracking-wider text-[11px] transition-colors shadow-lg shadow-white/5">
-                    Send Inquiry Message
-                </button>
-                <div id="status" class="text-center font-medium text-emerald-400 text-xs hidden"></div>
-           </form>
-        </section>
+    <button type="submit" id="btn" class="...">
+        Send Inquiry Message
+    </button>
+    <div id="status" class="text-center font-medium text-emerald-400 text-xs hidden"></div>
+
+</form> 
 
     </main>
 
