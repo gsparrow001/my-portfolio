@@ -405,35 +405,73 @@
         </section>
 
         <!-- 6. Contact Intake Gateway -->
-        <section id="contact" class="max-w-xl mx-auto border border-zinc-900/80 bg-zinc-950/40 backdrop-blur-md p-6 rounded-2xl space-y-4 shadow-xl">
-            <div class="text-center space-y-1">
-                <h3 class="text-base font-bold text-white">Start a Project</h3>
-                <p class="text-xs text-zinc-500">Send an inquiry directly to get started on your next design loop.</p>
-            </div>
-            
-           <form action="https://formspree.io/f/mnjeajll" method="POST" class="space-y-4 text-xs">
+       <!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ibukun .O. Peter | Creative Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { theme: { extend: { fontFamily: { sans: ['Plus Jakarta Sans', 'sans-serif'], } } } }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght=300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @keyframes floatingGlow { 0%, 100% { transform: translate(0, 0) scale(1); } 50% { transform: translate(40px, -60px) scale(1.1); } }
+        .ambient-glow-1 { animation: floatingGlow 22s infinite ease-in-out; }
+        .ambient-glow-2 { animation: floatingGlow 28s infinite ease-in-out 3s; }
+        .tech-grid { background-size: 50px 50px; background-image: linear-gradient(to right, rgba(63, 63, 70, 0.04) 1px, transparent 1px), linear-gradient(to bottom, rgba(63, 63, 70, 0.04) 1px, transparent 1px); }
+        .grain-overlay { background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.80' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"); opacity: 0.025; }
+    </style>
+</head>
+<body class="bg-zinc-950 text-zinc-100 font-sans antialiased selection:bg-neutral-800 selection:text-white relative overflow-x-hidden">
+
+    <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+        <div class="absolute inset-0 tech-grid"></div>
+        <div class="absolute inset-0 grain-overlay"></div>
+        <div id="interactive-spotlight" class="absolute inset-0 opacity-0 transition-opacity duration-500 bg-[radial-gradient(600px_circle_at_var(--mouse-x)_var(--mouse-y),rgba(16,185,129,0.06),transparent_80%)]"></div>
+        <div class="ambient-glow-1 absolute top-12 left-1/4 w-[500px] h-[500px] bg-emerald-500/5 rounded-full blur-[140px]"></div>
+        <div class="ambient-glow-2 absolute top-1/3 right-1/4 w-[600px] h-[600px] bg-blue-500/5 rounded-full blur-[160px]"></div>
+    </div>
+
+    <nav class="fixed top-0 left-0 w-full z-50 bg-zinc-950/70 backdrop-blur-md border-b border-zinc-900/60 px-6 md:px-12 py-4 flex justify-between items-center">
+        <span class="font-bold tracking-tight text-lg uppercase mix-blend-difference">Ibukun .O. Peter</span>
+        <a href="#contact" class="bg-white text-zinc-950 px-4 py-2 rounded-full text-xs font-semibold">Let's Collaborate</a>
+    </nav>
+
+  <section id="contact" class="max-w-xl mx-auto border border-zinc-900/80 bg-zinc-950/40 backdrop-blur-md p-6 rounded-2xl space-y-4 shadow-xl">
+    <div class="text-center space-y-1">
+        <h3 class="text-base font-bold text-white">Start a Project</h3>
+    </div>
     
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <div class="space-y-1">
-            <label class="text-[10px] font-medium text-zinc-400 block uppercase tracking-wider">Your Name</label>
-            <input required type="text" name="name" id="name" placeholder="John Doe" class="...">
+    <form action="https://formspree.io/f/mnjeajll" method="POST" class="space-y-4 text-xs">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="space-y-1">
+                <label class="text-[10px] font-medium text-zinc-400 block uppercase tracking-wider">Your Name</label>
+                <input required type="text" name="name" placeholder="John Doe" class="w-full bg-zinc-900/40 border border-zinc-800/80 rounded-xl px-4 py-2.5 outline-none text-white">
+            </div>
+            <div class="space-y-1">
+                <label class="text-[10px] font-medium text-zinc-400 block uppercase tracking-wider">Your Email</label>
+                <input required type="email" name="email" placeholder="john@company.com" class="w-full bg-zinc-900/40 border border-zinc-800/80 rounded-xl px-4 py-2.5 outline-none text-white">
+            </div>
         </div>
         <div class="space-y-1">
-            <label class="text-[10px] font-medium text-zinc-400 block uppercase tracking-wider">Your Email</label>
-            <input required type="email" name="email" id="email" placeholder="john@company.com" class="...">
+            <label class="text-[10px] font-medium text-zinc-400 block uppercase tracking-wider">Message Details</label>
+            <textarea required name="message" rows="4" placeholder="Briefly describe what you're looking to create..." class="w-full bg-zinc-900/40 border border-zinc-800/80 rounded-xl px-4 py-2.5 outline-none text-white resize-none"></textarea>
         </div>
-    </div>
-    <div class="space-y-1">
-        <label class="text-[10px] font-medium text-zinc-400 block uppercase tracking-wider">Message Details</label>
-        <textarea required name="message" id="message" rows="4" placeholder="..." class="..."></textarea>
-    </div>
+        <button type="submit" class="w-full bg-white hover:bg-zinc-200 text-zinc-950 font-bold py-3 rounded-xl uppercase tracking-wider text-[11px] transition-colors">
+            Send Inquiry Message
+        </button>
+    </form>
+</section>
 
-    <button type="submit" id="btn" class="...">
-        Send Inquiry Message
-    </button>
-    <div id="status" class="text-center font-medium text-emerald-400 text-xs hidden"></div>
-
-</form> 
+    <script>
+        lucide.createIcons();
+        // (Include your original filtering and spotlight logic here)
+    </script>
+</body>
+</html>
 
     </main>
 
